@@ -1,0 +1,5 @@
+<x-app-layout><div class="cc-card"><h1 class="cc-title">Student profile</h1><p class="cc-muted">Update the personal and financial baseline used by Campus Coin.</p><form class="cc-form" method="POST" action="{{ route('profile.settings.update') }}">@csrf @method('PUT')
+<div><label>Name</label><input name="name" value="{{ $user->name }}" required></div><div><label>Email</label><input value="{{ $user->email }}" disabled></div>
+<div><label>Academic year</label><input name="academic_year" value="{{ $user->academic_year }}"></div><div><label>Monthly allowance</label><input type="number" step=".01" min="0" name="monthly_allowance" value="{{ $user->monthly_allowance }}"></div>
+<div><label>Monthly saving goal</label><input type="number" step=".01" min="0" name="saving_goal" value="{{ $user->saving_goal }}"></div><button class="cc-btn green">Save profile</button>
+</form></div></x-app-layout>

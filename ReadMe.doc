@@ -1,0 +1,35 @@
+<html><head><meta charset="utf-8"><title>Campus Coin ReadMe</title></head><body>
+<h1>Campus Coin — ReadMe / Installation Guide</h1>
+<p><b>Theme:</b> NextGen BudgetBee</p>
+<h2>1. Requirements</h2>
+<p>PHP 8.3+, Composer, Node.js/npm, MySQL and a modern browser.</p>
+<h2>2. Installation</h2>
+<ol>
+<li>Extract the project.</li>
+<li>Open the project folder in PowerShell/Command Prompt.</li>
+<li>Run <b>composer install</b>.</li>
+<li>Create the .env file from .env.example.</li>
+<li>Enter the MySQL database name, username and password.</li>
+<li>Run <b>php artisan key:generate</b>.</li>
+<li>Run <b>php artisan migrate --seed</b>.</li>
+<li>Run <b>php artisan storage:link</b>.</li>
+<li>Run <b>npm install</b>.</li>
+<li>Run <b>npm run build</b>.</li>
+<li>Run <b>php artisan serve</b>.</li>
+<li>Open the URL shown by Laravel.</li>
+</ol>
+<h2>3. Test Credentials</h2>
+<p><b>Student:</b> student@campuscoin.test / Student@12345</p>
+<p><b>Administrator:</b> admin@campuscoin.test / Admin@12345</p>
+<p>Change these passwords before public hosting.</p>
+<h2>4. Recommended Test Sequence</h2>
+<ol>
+<li>Open the home page.</li><li>Register/login as a student.</li><li>Add income and expenses.</li><li>Edit and delete a transaction.</li><li>Create a personal category.</li><li>Set a monthly budget.</li><li>Check dashboard totals and trend.</li><li>Open Insights and save an insight.</li><li>Open Reports, apply filters, import CSV and export CSV.</li><li>Use Print / Save PDF for a PDF copy.</li><li>Toggle dark mode and test the mobile layout.</li><li>Open Sitemap.</li><li>Logout and use Administrator Login.</li><li>Review the admin dashboard and default categories.</li>
+</ol>
+<h2>5. Fresh Database Warning</h2>
+<p><b>php artisan migrate:fresh --seed</b> deletes all database data. Use only for a fresh test database.</p>
+<h2>6. Project Documentation</h2>
+<p>See docs/PROJECT_REPORT.md for problem definition, architecture, security, test data, feature list and submission notes.</p>
+<h2>7. Assumptions</h2>
+<ul><li>Amounts are shown in PKR for the demo.</li><li>No real banking or payment processing is performed.</li><li>Smart insights are advisory and use recorded transaction data.</li><li>PDF output is produced through the browser print/save-to-PDF workflow.</li></ul>
+</body></html>

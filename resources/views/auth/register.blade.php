@@ -20,6 +20,21 @@
             </div>
 
             <div class="mt-4">
+                <x-label for="academic_year" value="{{ __('Academic Year') }}" />
+                <x-input id="academic_year" class="block mt-1 w-full" type="text" name="academic_year" :value="old('academic_year')" placeholder="e.g. 2026 / 2nd Year" />
+            </div>
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <x-label for="monthly_allowance" value="{{ __('Monthly Allowance') }}" />
+                    <x-input id="monthly_allowance" class="block mt-1 w-full" type="number" step="0.01" min="0" name="monthly_allowance" :value="old('monthly_allowance')" />
+                </div>
+                <div>
+                    <x-label for="saving_goal" value="{{ __('Monthly Saving Goal') }}" />
+                    <x-input id="saving_goal" class="block mt-1 w-full" type="number" step="0.01" min="0" name="saving_goal" :value="old('saving_goal')" />
+                </div>
+            </div>
+
+            <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>

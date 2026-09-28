@@ -1,0 +1,5 @@
+<x-app-layout><div class="cc-card"><h1 class="cc-title">Edit transaction</h1><form class="cc-form" method="POST" action="{{ route('transactions.update',$transaction) }}">@csrf @method('PUT')
+<div><label>Type</label><select name="type"><option value="expense" @selected($transaction->type==='expense')>Expense</option><option value="income" @selected($transaction->type==='income')>Income</option></select></div>
+<div><label>Category</label><select name="category_id">@foreach($categories as $c)<option value="{{ $c->id }}" @selected($transaction->category_id===$c->id)>{{ $c->name }} ({{ ucfirst($c->type) }})</option>@endforeach</select></div>
+<div><label>Amount</label><input type="number" step=".01" name="amount" value="{{ $transaction->amount }}" required></div><div><label>Date</label><input type="date" name="date" value="{{ $transaction->date->toDateString() }}" required></div>
+<div class="full"><label>Description</label><input name="description" value="{{ $transaction->description }}"></div><button class="cc-btn green">Update</button><a class="cc-btn light" href="{{ route('dashboard') }}">Cancel</a></form></div></x-app-layout>
