@@ -25,7 +25,7 @@
 <span>Campus Coin<small>NextGen BudgetBee</small></span>
 </a>
 <div class="cc-links">
-<a class="{{ request()->routeIs('dashboard')?'active':'' }}" href="{{ route('dashboard') }}">Dashboard</a>
+<!-- <a class="{{ request()->routeIs('dashboard')?'active':'' }}" href="{{ route('dashboard') }}">Dashboard</a> -->
 <a class="{{ request()->routeIs('budgets.*')?'active':'' }}" href="{{ route('budgets.index') }}">Budgets</a>
 <a class="{{ request()->routeIs('reports.*')?'active':'' }}" href="{{ route('reports.index') }}">Reports</a>
 <a href="{{ route('sitemap') }}">Sitemap</a>
